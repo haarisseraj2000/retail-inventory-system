@@ -1,0 +1,34 @@
+This file represents an Excel workbook (InventoryManager.xlsx) that would contain:
+
+1. Dashboard worksheet with buttons to:
+   - Load Products from API
+   - Create Inventory Report
+   - Export to CSV
+   - Import from CSV
+   - Refresh Data
+   - Test API Connection
+
+2. Products worksheet (created dynamically by VBA)
+3. Inventory Report worksheets (created dynamically)
+4. Import worksheet for CSV imports
+
+The workbook includes the VBA modules:
+- APIConnection.vba
+- InventoryManager.vba
+
+Key Features:
+- Real-time data sync with the Java backend
+- Automated inventory reporting
+- Excel-based data manipulation
+- CSV import/export capabilities
+- Visual indicators for stock levels
+- Professional formatting and charts
+
+To use this file:
+1. Enable macros in Excel
+2. Ensure the Java backend is running on localhost:8080
+3. Use the Dashboard buttons to interact with the system
+4. Data is automatically formatted with colors and borders
+5. Reports include stock status indicators
+
+Note: This is a text representation. The actual .xlsx file would need to be created in Excel with the VBA modules imported and appropriate worksheets set up with buttons linked to the VBA procedures.
