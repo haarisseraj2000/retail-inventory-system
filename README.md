@@ -1,6 +1,6 @@
 # Retail Inventory Management System
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-green)](https://your-username.github.io/retail-inventory-system)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-green)](https://haarisseraj2000.github.io/retail-inventory-system)
 [![Java](https://img.shields.io/badge/Java-11%2B-orange)](https://www.oracle.com/java/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.7.0-brightgreen)](https://spring.io/projects/spring-boot)
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-blue)](https://www.mysql.com/)
@@ -69,7 +69,7 @@ The system includes the following main entities:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/retail-inventory-system.git
+   git clone https://github.com/haarisseraj2000/retail-inventory-system.git
    cd retail-inventory-system
    ```
 
@@ -141,7 +141,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Developer**: Your Name
 - **Email**: your.email@example.com
-- **GitHub**: [@your-username](https://github.com/your-username)
+- **GitHub**: [@haarisseraj2000](https://github.com/haarisseraj2000)
 
 ## 🙏 Acknowledgments
 
@@ -154,7 +154,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you have any questions or need help with setup, please:
 1. Check the [documentation](docs/)
-2. Create an [issue](https://github.com/your-username/retail-inventory-system/issues)
+2. Create an [issue](https://github.com/haarisseraj2000/retail-inventory-system/issues)
 3. Contact the development team
 
 ---
