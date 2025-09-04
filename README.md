@@ -139,8 +139,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Team
 
-- **Developer**: Your Name
-- **Email**: your.email@example.com
+- **Developer**: Haaris Seraj
+- **Email**: haarisseraj2000@gmail.com
 - **GitHub**: [@haarisseraj2000](https://github.com/haarisseraj2000)
 
 ## 🙏 Acknowledgments
@@ -159,4 +159,4 @@ If you have any questions or need help with setup, please:
 
 ---
 
-⭐ **Star this repository if you found it helpful!**
+⭐ 
