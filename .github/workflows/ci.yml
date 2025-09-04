@@ -78,6 +78,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
+    - name: Update API URL for GitHub Pages
+      run: |
+        sed -i 's|http://localhost:8080/api|https://retail-inventory-api.herokuapp.com/api|g' frontend/js/app.js
+    
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
