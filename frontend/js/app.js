@@ -1,5 +1,8 @@
 // Configuration
-const API_BASE_URL = 'http://localhost:8080/api';
+// Use different API URL based on environment
+const API_BASE_URL = window.location.hostname === 'haarisseraj2000.github.io' 
+    ? 'https://demo-api.example.com/api'  // Demo API (will fallback to sample data)
+    : 'http://localhost:8080/api';  // Local development
 
 // Global variables
 let currentSection = 'dashboard';
@@ -13,6 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function initializeApp() {
+    // Check if running in demo mode (GitHub Pages)
+    const isDemoMode = window.location.hostname === 'haarisseraj2000.github.io';
+    
+    if (isDemoMode) {
+        showDemoNotification();
+    }
+    
     loadDashboardData();
     initializeCharts();
     setupEventListeners();
@@ -60,11 +70,13 @@ async function loadProductCount() {
             document.getElementById('totalProducts').textContent = count;
         } else {
             console.error('Failed to load product count');
-            document.getElementById('totalProducts').textContent = '0';
+            // Use demo data count
+            document.getElementById('totalProducts').textContent = '156';
         }
     } catch (error) {
         console.error('Error loading product count:', error);
-        document.getElementById('totalProducts').textContent = '0';
+        // Use demo data count
+        document.getElementById('totalProducts').textContent = '156';
     }
 }
 
@@ -200,6 +212,60 @@ function loadSampleProducts() {
             category: { name: 'Electronics' },
             unitPrice: 999.99,
             stock: 17,
+            isActive: true
+        },
+        {
+            id: 5,
+            sku: 'TABLET001',
+            name: 'iPad Pro 12.9"',
+            category: { name: 'Electronics' },
+            unitPrice: 1099.99,
+            stock: 8,
+            isActive: true
+        },
+        {
+            id: 6,
+            sku: 'HEADPHONE001',
+            name: 'AirPods Pro',
+            category: { name: 'Electronics' },
+            unitPrice: 249.99,
+            stock: 3,
+            isActive: true
+        },
+        {
+            id: 7,
+            sku: 'JEANS001',
+            name: 'Mens Denim Jeans',
+            category: { name: 'Clothing' },
+            unitPrice: 79.99,
+            stock: 0,
+            isActive: true
+        },
+        {
+            id: 8,
+            sku: 'SHOES001',
+            name: 'Running Shoes',
+            category: { name: 'Sports' },
+            unitPrice: 129.99,
+            stock: 25,
+            isActive: true
+        },
+        {
+            id: 9,
+            sku: 'BOOK001',
+            name: 'Programming in Java',
+            category: { name: 'Books' },
+            unitPrice: 49.99,
+            stock: 42,
+            isActive: true
+        },
+        {
+            id: 10,
+            sku: 'PLANT001',
+            name: 'Monstera Deliciosa',
+            category: { name: 'Home & Garden' },
+            unitPrice: 39.99,
+            stock: 18,
             isActive: true
         }
     ];
@@ -372,6 +438,32 @@ async function checkApiConnection() {
     } catch (error) {
         return false;
     }
+}
+
+// Demo mode functions
+function showDemoNotification() {
+    const notification = document.createElement('div');
+    notification.className = 'alert alert-info alert-dismissible fade show position-fixed';
+    notification.style.top = '10px';
+    notification.style.left = '50%';
+    notification.style.transform = 'translateX(-50%)';
+    notification.style.zIndex = '9999';
+    notification.style.maxWidth = '600px';
+    notification.innerHTML = `
+        <strong>🎯 Live Demo Mode</strong><br>
+        This is a frontend demo with sample data. For the complete system with backend API, 
+        <a href="https://github.com/haarisseraj2000/retail-inventory-system" target="_blank" class="alert-link">view the repository</a>.
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Auto dismiss after 10 seconds
+    setTimeout(() => {
+        if (notification.parentNode) {
+            notification.parentNode.removeChild(notification);
+        }
+    }, 10000);
 }
 
 // Export functions for global access
